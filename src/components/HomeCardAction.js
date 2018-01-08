@@ -4,10 +4,10 @@ import styled from 'styled-components'
 class HomeCardAction extends Component {
   
   render () {
-    const { likes } = this.props
+    const { likes, like } = this.props
     return (
       <Wrap>
-        <Button>
+        <Button onClick={like} >
           {likes} 赞
         </Button>
         <Button>

@@ -1,10 +1,14 @@
 import React from 'react'
 import Home from '../components/Home'
 import { connect } from 'react-redux'
+import { like } from '../actions'
 
 const HomeContainer = props => <Home {...props} />
 
 const mapStateToProps = state =>({
   courses: state
 })
-export default connect(mapStateToProps)(HomeContainer)
+// mapDispatchToProps 的简写形式
+export default connect(mapStateToProps, {
+  like
+})(HomeContainer)
