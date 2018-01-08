@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import HomeCardAction from './HomeCardAction'
 
 class Home extends Component {
   render () {
@@ -9,6 +10,7 @@ class Home extends Component {
       t => (
         <CourseCard key={t.id}>
           <img alt='poster' src={t.poster} />
+          <HomeCardAction />
         </CourseCard>
       )
     )
