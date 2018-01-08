@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 class HomeCardAction extends Component {
+  
   render () {
+    const { likes } = this.props
     return (
       <Wrap>
         <Button>
-          12 赞
+          {likes} 赞
         </Button>
         <Button>
           2 评论

@@ -10,7 +10,7 @@ class Home extends Component {
       t => (
         <CourseCard key={t.id}>
           <img alt='poster' src={t.poster} />
-          <HomeCardAction />
+          <HomeCardAction likes={t.likes} />
         </CourseCard>
       )
     )
