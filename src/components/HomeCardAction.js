@@ -4,13 +4,13 @@ import styled from 'styled-components'
 class HomeCardAction extends Component {
   
   render () {
-    const { likes, like } = this.props
+    const { likes, like, goComment, id } = this.props
     return (
       <Wrap>
         <Button onClick={like} >
           {likes} 赞
         </Button>
-        <Button>
+        <Button onClick={() => goComment(id)} >
           2 评论
         </Button>
       </Wrap>

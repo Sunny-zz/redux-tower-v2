@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from '../components/Home'
 import { connect } from 'react-redux'
-import { like } from '../actions'
+import { like, goComment } from '../actions'
 
 const HomeContainer = props => <Home {...props} />
 
@@ -10,5 +10,6 @@ const mapStateToProps = state =>({
 })
 // mapDispatchToProps 的简写形式
 export default connect(mapStateToProps, {
-  like
+  like,
+  goComment
 })(HomeContainer)
