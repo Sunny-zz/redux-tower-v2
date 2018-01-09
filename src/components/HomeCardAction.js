@@ -7,7 +7,7 @@ class HomeCardAction extends Component {
     const { likes, like, goComment, id } = this.props
     return (
       <Wrap>
-        <Button onClick={like} >
+        <Button onClick={() => like(id)} >
           {likes} 赞
         </Button>
         <Button onClick={() => goComment(id)} >

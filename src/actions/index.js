@@ -1,7 +1,8 @@
 import history from '../utils/history'
 
-export const like = () => ({
-  type: 'LIKE'
+export const like = courseId => ({
+  type: 'LIKE',
+  courseId
 })
 
 export const goComment = id => {
