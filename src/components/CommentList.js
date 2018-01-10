@@ -13,7 +13,7 @@ class CommentList extends Component {
           <Body>
             {t.body}
           </Body>
-          <Action onClick={this.props.deleteCmt}>
+          <Action onClick={() => this.props.deleteCmt(t.id)}>
             删除
           </Action>
         </Comment>

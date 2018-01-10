@@ -12,7 +12,12 @@ const initialState = [
 ]
 
 const comments = (state = initialState, action) => {
-  return state
+  switch (action.type) {
+    case 'DELETE_COMMENT':
+      return state.filter(t => t.id !== action.id)
+    default:
+      return state
+  }
 }
 
 export default comments

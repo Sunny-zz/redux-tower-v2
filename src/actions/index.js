@@ -10,6 +10,7 @@ export const goComment = id => {
   return { type: 'GO_COMMENT' }
 }
 
-export const deleteCmt = () => ({
-  type: 'DELETE_COMMENT'
+export const deleteCmt = id => ({
+  type: 'DELETE_COMMENT',
+  id
 })
