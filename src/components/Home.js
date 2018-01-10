@@ -14,7 +14,7 @@ class Home extends Component {
           <CardAction 
             likes={t.likes} 
             like={like} 
-            comments={commentsByCourseId[t.id]}
+            comments={commentsByCourseId[t.id]||[]}
             goComment={goComment} 
             id={t.id} 
           />
