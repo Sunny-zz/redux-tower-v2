@@ -23,7 +23,8 @@ const courses = (state = initialState, action) => {
         if (t.id === courseId) {
           return {
             ...t,
-            likes: t.likes + 1
+            likes: t.likes + 1,
+            showHeart: true
           }
         }
         return t
