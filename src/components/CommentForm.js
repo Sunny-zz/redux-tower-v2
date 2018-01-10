@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import shortid from 'shortid'
+import Input from 'material-ui/Input'
+import Button from 'material-ui/Button'
 
 class CommentForm extends Component {
   state = {
@@ -43,11 +45,18 @@ class CommentForm extends Component {
     const { text, user } = this.state
     return (
       <Wrap>
-        <input value={user} onChange={this.handleUserChange} />
-        <input value={text} onChange={this.handleChange} />
-        <button onClick={this.handleClick}>
+        <StyledInput 
+          placeholder='名字'
+          value={user} 
+          onChange={this.handleUserChange} />
+        <StyledInput 
+          placeholder='评论'
+          value={text} 
+          onChange={this.handleChange} />
+        <Button onClick={this.handleClick}
+          raised color="primary" >
           评论
-        </button>
+        </Button>
       </Wrap>
     )
   }
@@ -55,4 +64,10 @@ class CommentForm extends Component {
 
 export default CommentForm
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  display: flex;
+  padding: 20px;
+`
+const StyledInput = styled(Input)`
+  flex-grow: 1;
+`
