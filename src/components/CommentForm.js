@@ -45,12 +45,12 @@ class CommentForm extends Component {
     const { text, user } = this.state
     return (
       <Wrap>
-        <StyledInput
+        <NameInput
           placeholder="名字"
           value={user}
           onChange={this.handleUserChange}
         />
-        <StyledInput
+        <CommentInput
           placeholder="评论"
           value={text}
           onChange={this.handleChange}
@@ -69,8 +69,13 @@ const Wrap = styled.div`
   display: flex;
   padding: 20px;
 `
-const StyledInput = styled(Input)`
+const CommentInput = styled(Input)`
   flex-grow: 1;
+  margin-right: 10px;
+`
+
+const NameInput = styled(Input) `
+  margin-right: 10px;
 `
 
 const StyledButton = styled(Button)`
