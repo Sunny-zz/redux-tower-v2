@@ -5,13 +5,19 @@ import HomeCardAction from './HomeCardAction'
 
 class Home extends Component {
   render () {
-    const { courses, like, goComment } = this.props
+    const { courses, like, goComment, commentsByCourseId } = this.props
     console.log(courses)
     const list = courses.map(
       t => (
         <CourseCard key={t.id}>
           <img alt='poster' src={t.poster} />
-          <HomeCardAction likes={t.likes} like={like} goComment={goComment} id={t.id} />
+          <HomeCardAction 
+            likes={t.likes} 
+            like={like} 
+            comments={commentsByCourseId[t.id]}
+            goComment={goComment} 
+            id={t.id} 
+          />
         </CourseCard>
       )
     )

@@ -7,7 +7,7 @@ import Comment from 'material-ui-icons/Comment';
 class HomeCardAction extends Component {
   
   render () {
-    const { likes, like, goComment, id } = this.props
+    const { likes, like, goComment, id, comments } = this.props
     return (
       <Wrap>
         <Button onClick={() => like(id)} >
@@ -16,7 +16,7 @@ class HomeCardAction extends Component {
         </Button>
         <Button onClick={() => goComment(id)} >
           <Comment />
-          2
+          {comments.length}
         </Button>
       </Wrap>
     )
