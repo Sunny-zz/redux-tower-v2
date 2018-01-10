@@ -4,28 +4,22 @@ import Card from 'material-ui/Card'
 import CardAction from './CardAction'
 
 class Home extends Component {
-  render () {
+  render() {
     const { courses, like, goComment, commentsByCourseId } = this.props
     console.log(courses)
-    const list = courses.map(
-      t => (
-        <CourseCard key={t.id}>
-          <img alt='poster' src={t.poster} />
-          <CardAction 
-            likes={t.likes} 
-            like={like} 
-            comments={commentsByCourseId[t.id]||[]}
-            goComment={goComment} 
-            id={t.id} 
-          />
-        </CourseCard>
-      )
-    )
-    return (
-      <Wrap>
-        {list}
-      </Wrap>
-    )
+    const list = courses.map(t => (
+      <CourseCard key={t.id}>
+        <img alt="poster" src={t.poster} />
+        <CardAction
+          likes={t.likes}
+          like={like}
+          comments={commentsByCourseId[t.id] || []}
+          goComment={goComment}
+          id={t.id}
+        />
+      </CourseCard>
+    ))
+    return <Wrap>{list}</Wrap>
   }
 }
 

@@ -4,10 +4,7 @@ import CourseContainer from '../containers/CourseContainer'
 import Header from '../components/Header'
 import '../assets/global.css'
 import history from '../utils/history'
-import {
-  Router,
-  Route
-} from 'react-router'
+import { Router, Route } from 'react-router'
 
 class Main extends Component {
   render() {
@@ -15,8 +12,8 @@ class Main extends Component {
       <Router history={history}>
         <div>
           <Header />
-          <Route exact path='/' component={HomeContainer} />
-          <Route path='/c/:id' component={CourseContainer} />
+          <Route exact path="/" component={HomeContainer} />
+          <Route path="/c/:id" component={CourseContainer} />
         </div>
       </Router>
     )

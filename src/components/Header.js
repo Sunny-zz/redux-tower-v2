@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import {
-  Link
-} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
-  render () {
+  render() {
     return (
       <Wrap>
-        <Link to='/'>Home</Link>
+        <Link to="/">Home</Link>
       </Wrap>
     )
   }

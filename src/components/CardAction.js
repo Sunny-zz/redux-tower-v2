@@ -4,16 +4,15 @@ import ThumbUp from 'material-ui-icons/ThumbUp'
 import Comment from 'material-ui-icons/Comment'
 
 class HomeCardAction extends Component {
-  
-  render () {
+  render() {
     const { likes, like, goComment, id, comments } = this.props
     return (
       <Wrap>
-        <Button onClick={() => like(id)} >
+        <Button onClick={() => like(id)}>
           <ThumbUp />
           {likes}
         </Button>
-        <Button onClick={() => goComment(id)} >
+        <Button onClick={() => goComment(id)}>
           <Comment />
           {comments.length}
         </Button>

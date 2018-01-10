@@ -40,21 +40,22 @@ class CommentForm extends Component {
       user: ''
     })
   }
-  
-  render () {
+
+  render() {
     const { text, user } = this.state
     return (
       <Wrap>
-        <StyledInput 
-          placeholder='名字'
-          value={user} 
-          onChange={this.handleUserChange} />
-        <StyledInput 
-          placeholder='评论'
-          value={text} 
-          onChange={this.handleChange} />
-        <StyledButton onClick={this.handleClick}
-          raised color="accent" >
+        <StyledInput
+          placeholder="名字"
+          value={user}
+          onChange={this.handleUserChange}
+        />
+        <StyledInput
+          placeholder="评论"
+          value={text}
+          onChange={this.handleChange}
+        />
+        <StyledButton onClick={this.handleClick} raised color="accent">
           评论
         </StyledButton>
       </Wrap>

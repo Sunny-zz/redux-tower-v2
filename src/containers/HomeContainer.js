@@ -6,7 +6,7 @@ import { getCommentsByCourseId } from '../selectors'
 
 const HomeContainer = props => <Home {...props} />
 
-const mapStateToProps = state =>({
+const mapStateToProps = state => ({
   courses: state.courses,
   commentsByCourseId: getCommentsByCourseId(state)
 })

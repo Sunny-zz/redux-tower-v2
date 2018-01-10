@@ -22,10 +22,7 @@ const initialState = [
 const comments = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_COMMENT':
-      return [
-        ...state,
-        action.comment
-      ]
+      return [...state, action.comment]
     case 'DELETE_COMMENT':
       return state.filter(t => t.id !== action.id)
     default:

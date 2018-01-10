@@ -5,11 +5,11 @@ import Card from 'material-ui/Card'
 import CommentForm from './CommentForm'
 
 class Course extends Component {
-  render () {
-    const { 
-      commentsByCourseId, 
-      deleteCmt, 
-      match, 
+  render() {
+    const {
+      commentsByCourseId,
+      deleteCmt,
+      match,
       addComment,
       coursesById
     } = this.props
@@ -36,8 +36,7 @@ class Course extends Component {
 
 export default Course
 
-const Wrap = styled.div`
-`
+const Wrap = styled.div``
 
 const Upper = styled.div`
   min-height: 30vh;
