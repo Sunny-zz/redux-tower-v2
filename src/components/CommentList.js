@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Delete from 'material-ui-icons/Delete'
 
 class CommentList extends Component {
   render () {
@@ -14,7 +15,7 @@ class CommentList extends Component {
             {t.body}
           </Body>
           <Action onClick={() => this.props.deleteCmt(t.id)}>
-            删除
+            <Delete />
           </Action>
         </Comment>
       )
@@ -48,6 +49,9 @@ const Body = styled.div`
 `
 
 const Action = styled.div`
-  border: 2px solid red;
   cursor: pointer;
+  padding-top: 0;
+  svg {
+    padding: 0;
+  }
 `
