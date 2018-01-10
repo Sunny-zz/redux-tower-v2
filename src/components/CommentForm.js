@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import shortid from 'shortid'
 
 class CommentForm extends Component {
   state = {
-    text: ''
+    text: '',
+    user: ''
   }
 
   handleChange = e => {
@@ -13,18 +15,34 @@ class CommentForm extends Component {
     })
   }
 
+  handleUserChange = e => {
+    e.preventDefault()
+    this.setState({
+      user: e.target.value
+    })
+  }
+
   handleClick = e => {
     e.preventDefault()
-    console.log('handleClick---', this.state.text)
+    const { text, user } = this.state
+    const id = shortid()
+    const comment = {
+      body: text,
+      id,
+      user,
+      course: this.props.id
+    }
+    console.log('handleClick---', comment)
     this.setState({
       text: ''
     })
   }
   
   render () {
-    const { text } = this.state
+    const { text, user } = this.state
     return (
       <Wrap>
+        <input value={user} onChange={this.handleUserChange} />
         <input value={text} onChange={this.handleChange} />
         <button onClick={this.handleClick}>
           评论
