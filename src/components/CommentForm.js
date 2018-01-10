@@ -67,7 +67,6 @@ export default CommentForm
 
 const Wrap = styled.div`
   display: flex;
-  padding: 20px;
 `
 const CommentInput = styled(Input)`
   flex-grow: 1;

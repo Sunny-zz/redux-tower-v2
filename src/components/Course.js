@@ -55,6 +55,7 @@ const CommentWrap = styled.div`
   min-height: 10vh;
   width: 600px;
   margin: 0 auto;
+  padding: 20px;
 `
 
 const Poster = styled(Card)`

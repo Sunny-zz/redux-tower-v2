@@ -21,7 +21,7 @@ class CommentList extends Component {
 export default CommentList
 
 const Wrap = styled.div`
-  padding: 10px;
+  padding: 10px 0;
   line-height: 30px;
 `
 
