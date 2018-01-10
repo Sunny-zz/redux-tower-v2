@@ -4,7 +4,9 @@ import CommentList from './CommentList'
 
 class Course extends Component {
   render () {
-    const { comments, deleteCmt } = this.props
+    const { commentsByCourseId, deleteCmt, match } = this.props
+    const { id } = match.params
+    const comments = commentsByCourseId[id] || []
     return (
       <Wrap>
         <Upper>
