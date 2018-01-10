@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import CommentList from './CommentList'
 
 class Course extends Component {
   render () {
@@ -11,6 +12,7 @@ class Course extends Component {
         </Upper>
         <Lower>
           <CommentWrap>
+            <CommentList comments={comments} />
           </CommentWrap>
         </Lower>
       </Wrap>
