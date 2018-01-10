@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import ThumbUp from 'material-ui-icons/ThumbUp';
 import Comment from 'material-ui-icons/Comment';
 
-
 class HomeCardAction extends Component {
   
   render () {

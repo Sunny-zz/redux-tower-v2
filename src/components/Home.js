@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Card from 'material-ui/Card';
-import HomeCardAction from './HomeCardAction'
+import Card from 'material-ui/Card'
+import CardAction from './CardAction'
 
 class Home extends Component {
   render () {
@@ -11,7 +11,7 @@ class Home extends Component {
       t => (
         <CourseCard key={t.id}>
           <img alt='poster' src={t.poster} />
-          <HomeCardAction 
+          <CardAction 
             likes={t.likes} 
             like={like} 
             comments={commentsByCourseId[t.id]}
