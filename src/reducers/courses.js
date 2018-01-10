@@ -17,10 +17,19 @@ const initialState = [
 
 const courses = (state = initialState, action) => {
   switch (action.type) {
-    case 'LIKE':
-      const { courseId } = action
+    case 'HIDE_HEART':
       return state.map(t => {
-        if (t.id === courseId) {
+        if (t.id === action.courseId) {
+          return {
+            ...t,
+            showHeart: false
+          }
+        }
+        return t
+      })
+    case 'LIKE':
+      return state.map(t => {
+        if (t.id === action.courseId) {
           return {
             ...t,
             likes: t.likes + 1,
