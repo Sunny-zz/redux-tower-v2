@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Card from 'material-ui/Card';
 import HomeCardAction from './HomeCardAction'
 
 class Home extends Component {
@@ -30,7 +31,7 @@ const Wrap = styled.div`
   margin: 20px auto;
   justify-content: space-between;
 `
-const CourseCard = styled.div`
+const CourseCard = styled(Card)`
   width: 300px;
   img {
     width: 100%;
