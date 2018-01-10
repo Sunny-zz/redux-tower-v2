@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 class Course extends Component {
   render () {
+    const { comments } = this.props
     return (
       <Wrap>
         <Upper>
