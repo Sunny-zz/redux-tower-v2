@@ -21,17 +21,18 @@ class CommentList extends Component {
 export default CommentList
 
 const Wrap = styled.div`
-  * {
-    padding: 10px;
-  }
+  padding: 10px;
+  line-height: 30px;
 `
 
 const Comment = styled.div`
   display: flex;
+  margin-bottom: 5px;
 `
 
 const User = styled.div`
   font-weight: 600;
+  margin-right: 5px;
 `
 
 const Body = styled.div`
@@ -40,8 +41,10 @@ const Body = styled.div`
 
 const Action = styled.div`
   cursor: pointer;
-  padding-top: 0;
   svg {
-    padding: 10px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 `
