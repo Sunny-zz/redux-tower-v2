@@ -19,6 +19,7 @@ export default Header
 const Wrap = styled.div`
   background: #00bcd4;
   text-align: center;
+  padding: 20px;
   a {
     display: inline-block;
     color: white;

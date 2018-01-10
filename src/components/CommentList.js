@@ -52,6 +52,6 @@ const Action = styled.div`
   cursor: pointer;
   padding-top: 0;
   svg {
-    padding: 0;
+    padding: 10px;
   }
 `
