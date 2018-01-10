@@ -9,7 +9,8 @@ class Course extends Component {
           Upper
         </Upper>
         <Lower>
-          Lower
+          <CommentWrap>
+          </CommentWrap>
         </Lower>
       </Wrap>
     )
@@ -29,4 +30,12 @@ const Upper = styled.div`
 const Lower = styled.div`
   min-height: 60vh;
   background-color: #eeeeee;
+  padding-top: 20px;
+`
+
+const CommentWrap = styled.div`
+  background: #fff;
+  min-height: 10vh;
+  width: 600px;
+  margin: 0 auto;
 `
