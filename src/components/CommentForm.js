@@ -53,10 +53,10 @@ class CommentForm extends Component {
           placeholder='评论'
           value={text} 
           onChange={this.handleChange} />
-        <Button onClick={this.handleClick}
-          raised color="primary" >
+        <StyledButton onClick={this.handleClick}
+          raised color="accent" >
           评论
-        </Button>
+        </StyledButton>
       </Wrap>
     )
   }
@@ -70,4 +70,8 @@ const Wrap = styled.div`
 `
 const StyledInput = styled(Input)`
   flex-grow: 1;
+`
+
+const StyledButton = styled(Button)`
+  color: white;
 `
