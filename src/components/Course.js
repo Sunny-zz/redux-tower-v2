@@ -5,7 +5,7 @@ import CommentForm from './CommentForm'
 
 class Course extends Component {
   render () {
-    const { commentsByCourseId, deleteCmt, match } = this.props
+    const { commentsByCourseId, deleteCmt, match, addComment } = this.props
     const { id } = match.params
     const comments = commentsByCourseId[id] || []
     return (
@@ -15,7 +15,7 @@ class Course extends Component {
         </Upper>
         <Lower>
           <CommentWrap>
-            <CommentForm id={id} />
+            <CommentForm id={id} addComment={addComment} />
             <CommentList comments={comments} deleteCmt={deleteCmt} />
           </CommentWrap>
         </Lower>

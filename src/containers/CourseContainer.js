@@ -1,7 +1,7 @@
 import React from 'react'
 import Course from '../components/Course'
 import { connect } from 'react-redux'
-import { deleteCmt } from '../actions'
+import { deleteCmt, addComment } from '../actions'
 import { getCommentsByCourseId } from '../selectors'
 
 const CourseContainer = props => <Course {...props} />
@@ -11,5 +11,6 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, {
-  deleteCmt
+  deleteCmt,
+  addComment
 })(CourseContainer)

@@ -32,9 +32,10 @@ class CommentForm extends Component {
       user,
       course: this.props.id
     }
-    console.log('handleClick---', comment)
+    this.props.addComment(comment)
     this.setState({
-      text: ''
+      text: '',
+      user: ''
     })
   }
   
