@@ -5,6 +5,11 @@ export const like = courseId => ({
   courseId
 })
 
+export const hideHeart = courseId => ({
+  type: 'HIDE_HEART',
+  courseId
+})
+
 export const goComment = id => {
   history.push(`/c/${id}`)
   return { type: 'GO_COMMENT' }

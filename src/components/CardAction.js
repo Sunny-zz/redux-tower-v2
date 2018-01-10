@@ -6,6 +6,12 @@ import Comment from 'material-ui-icons/Comment'
 class HomeCardAction extends Component {
   handleClick = id => {
     this.props.like(id)
+    setTimeout(
+      () => {
+        this.props.hideHeart(id)
+      }
+      , 1000
+    )
   }
   
   render() {

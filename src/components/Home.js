@@ -5,7 +5,7 @@ import CardAction from './CardAction'
 
 class Home extends Component {
   render() {
-    const { courses, like, goComment, commentsByCourseId } = this.props
+    const { courses, like, goComment, commentsByCourseId, hideHeart } = this.props
     console.log('courses', courses)
     const list = courses.map(t => (
       <CourseCard key={t.id}>
@@ -16,6 +16,7 @@ class Home extends Component {
         <CardAction
           likes={t.likes}
           like={like}
+          hideHeart={hideHeart}
           comments={commentsByCourseId[t.id] || []}
           goComment={goComment}
           id={t.id}
