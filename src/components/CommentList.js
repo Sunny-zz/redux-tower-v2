@@ -13,7 +13,7 @@ class CommentList extends Component {
           <Body>
             {t.body}
           </Body>
-          <Action>
+          <Action onClick={this.props.deleteCmt}>
             删除
           </Action>
         </Comment>
@@ -48,5 +48,6 @@ const Body = styled.div`
 `
 
 const Action = styled.div`
-  
+  border: 2px solid red;
+  cursor: pointer;
 `

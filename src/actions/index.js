@@ -9,3 +9,7 @@ export const goComment = id => {
   history.push(`/c/${id}`)
   return { type: 'GO_COMMENT' }
 }
+
+export const deleteCmt = () => ({
+  type: 'DELETE_COMMENT'
+})

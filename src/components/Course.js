@@ -4,7 +4,7 @@ import CommentList from './CommentList'
 
 class Course extends Component {
   render () {
-    const { comments } = this.props
+    const { comments, deleteCmt } = this.props
     return (
       <Wrap>
         <Upper>
@@ -12,7 +12,7 @@ class Course extends Component {
         </Upper>
         <Lower>
           <CommentWrap>
-            <CommentList comments={comments} />
+            <CommentList comments={comments} deleteCmt={deleteCmt} />
           </CommentWrap>
         </Lower>
       </Wrap>
