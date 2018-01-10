@@ -6,9 +6,17 @@ class CommentList extends Component {
     const { comments } = this.props
     const list = comments.map(
       t => (
-        <div key={t.id}>
-          {t.user} -- {t.body}
-        </div>
+        <Comment key={t.id}>
+          <User>
+            {t.user}:
+          </User>
+          <Body>
+            {t.body}
+          </Body>
+          <Action>
+            删除
+          </Action>
+        </Comment>
       )
     )
     return (
@@ -21,4 +29,24 @@ class CommentList extends Component {
 
 export default CommentList
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  * {
+    padding: 10px;
+  }
+`
+
+const Comment = styled.div`
+  display: flex;
+`
+
+const User = styled.div`
+  font-weight: 600;
+`
+
+const Body = styled.div`
+  flex-grow: 1;
+`
+
+const Action = styled.div`
+  
+`
