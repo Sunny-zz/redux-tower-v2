@@ -26,22 +26,23 @@ export default HomeCardAction
 const Wrap = styled.div`
   padding: 10px;
   display: flex;
-  justify-content: space-between;
-  svg {
-    fill: #212121;
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-  }
+  justify-content: space-between
 `
 
 const Button = styled.div`
+  display: flex;
   background-color: rgb(242, 244, 246);
   color: rgb(76, 87, 101);
-  height: 36px;
   padding: 2px 9px;
   :hover {
     cursor: pointer;
   }
-  line-height: 36px;
+  line-height: 26px; // 16+5*2
+  svg {
+    fill: #212121;
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+    margin-left: 0;
+  }
 `
